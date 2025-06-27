@@ -18,9 +18,9 @@ public class SortingMapByKeys {
 		obj.putAll(Map.of("Samba",1,"Murty",2,"Sanjay",3,"Srinu",4));
 		
 		HashMap<String,Integer> sorted = obj.entrySet().
-												stream().
-												sorted((a,b)->a.getKey().compareTo(b.getKey())).
-												collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(a,b)->a,LinkedHashMap::new));
+							stream().
+							sorted((a,b)->a.getKey().compareTo(b.getKey())).
+							collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(a,b)->a,LinkedHashMap::new));
 		System.out.println(sorted+" - Sorted by using Streams.\n");
 		obj.clear();
 		
